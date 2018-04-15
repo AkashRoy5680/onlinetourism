@@ -54,7 +54,7 @@
 
 
   <td><a href="editcoment&{{ $data->id }}" class="btn btn-info">Edit</a></td>
- <td><a onclick="return confirm('Delete this record?')" class="btn btn-danger" href="delete_coment&{{ $data->id }}">Delete X</a></td>
+ <td><a onclick="return confirm('Delete this record?')" class="btn btn-danger" href="delete_coment&{{ $data->id }}">Delete</a></td>
  </tr>
 @endforeach
 </table>

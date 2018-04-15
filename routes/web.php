@@ -32,6 +32,16 @@ Route::get('/adminlogin', function () {
     return view('Admin.admin_login');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
+
+Route::get('/quali', function () {
+    return view('qualification');
+});
+
+
 
 Route::get('/userinsert', function () {
     return view('user_insert');
@@ -83,6 +93,10 @@ Route::get('/applyinsert', function () {
 });
 
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 
 Route::post('/job_apply','ApplyController@store');
 Route::get('/applylist','ApplyController@all_applies');
@@ -127,8 +141,8 @@ Route::post('/admin_insert','RegisterController@admin_inset_user');
 Route::post('/login_check','RegisterController@login');
 Route::get('/users','RegisterController@show_users');
 
-
-
+Route::get('/quali&{id}','RegisterController@edit_quali');
+Route::post('/quali_action&{id}','RegisterController@update_quali');
 Route::get('/edit_user&{id}','RegisterController@edit');
 Route::post('/update&{id}','RegisterController@update');
 Route::get('/details&{id}','RegisterController@show_details');

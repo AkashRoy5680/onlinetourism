@@ -12,7 +12,7 @@ use Hash;
 
 class RegisterController extends Controller
 {
-    public function store()
+    protected function store()
 	{
 		
 		$data=Input::except(array('_token'));
@@ -55,7 +55,7 @@ class RegisterController extends Controller
 	}
 	
 	
-	 public function admin_inset_user()
+	 protected function admin_inset_user()
 	{
 		
 		$data=Input::except(array('_token'));
@@ -77,7 +77,7 @@ class RegisterController extends Controller
 	
 	
 	
-	public function login()
+	protected function login()
 	{
 	  $data=Input::except(array('_token'));
 	  
@@ -116,7 +116,7 @@ class RegisterController extends Controller
 		
 	}
 	
-	 public function show_users()
+	 protected function show_users()
     {
 		//$register_users=Register::all();(by calling this method you will get all data in a single page)
       $register_users=Register::paginate(10);
@@ -126,7 +126,7 @@ class RegisterController extends Controller
 	
 	
 	
-	public function admin_profile()
+	protected function admin_profile()
     {
 		$data=Input::except(array('_token'));
 		$username=Input::get('username');
@@ -143,23 +143,28 @@ class RegisterController extends Controller
     }
 	
 	
-	public function edit($id)
+	protected function edit($id)
 	{
 		$Data= Register:: findOrFail($id);
 		 return view('edit_user', compact('Data'));
 		
 	}
 	
+	public function edit_quali($id)
+	{
+		$Data= Register:: findOrFail($id);
+		 return view('qualification', compact('Data'));
 		
+	}	
 	
-	public function show_details($id)
+	protected function show_details($id)
 	{
 		$Data= Register:: findOrFail($id);
 		 return view('details', compact('Data'));
 		
 	}
 	
-	public function update(  Request $request,$id)
+	protected function update(  Request $request,$id)
 	{
 		$Data= Register:: findOrFail($id);
 		$Data->name=$request->uname;
@@ -175,8 +180,23 @@ class RegisterController extends Controller
 		
 	}
 	
+	protected function update_quali(  Request $request,$id)
+	{
+		$Data= Register:: findOrFail($id);
+		$Data->institute=$request->institute;
+		$Data->HSC=$request->HSC;
+		$Data->SSC=$request->SSC;
+		
+		$Data->proffession=$request->proffession;
 	
-	public function edit_profile($id)
+		
+		$Data->save();
+		return Redirect('profile');
+		
+	}
+	
+	
+	protected function edit_profile($id)
 	{
 		$Data= Register:: findOrFail($id);
 		 return view('edit_profile', compact('Data'));
@@ -184,7 +204,7 @@ class RegisterController extends Controller
 	}
 	
 	
-	public function update_profile(  Request $request,$id)
+	protected function update_profile(  Request $request,$id)
 	{
 		$Data= Register:: findOrFail($id);
 		$Data->name=$request->uname;
@@ -200,7 +220,7 @@ class RegisterController extends Controller
 		
 	}
 	
-	public function delete_user($id)
+	protected function delete_user($id)
 	{
 		$user= Register:: findOrFail($id);
          $user->delete();

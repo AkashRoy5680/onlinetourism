@@ -1,3 +1,6 @@
+@extends('layout2')
+@section('content')
+
 <style>
 input{width:700px; height:35px;border:1px solid black; border-radius: 10px;padding:2px; }
 
@@ -26,23 +29,23 @@ select{width:700px; height:35px; border:1px solid black; border-radius:5px;}
 <b>User type:</b></br>
 <select name="utype"value="{{$Data->utype}}">
 <option value="Student">Student</option>
-<option value="Teacher">Teacher</option>
-<option value="Gurdian">Gurdian</option>
+<option value="Tourist">Tourist</option>
+<option value="Guide">Guide</option>
 </select></br>
 
-<b>Select Category:</b></br>
+<b>User Category:</b></br>
 <select name="category">
-<option value="Bangla medium" selected>Bangla medium</option>
-<option value="English medium">English medium</option>
-<option value="Arts">Arts</option>
-<option value="language learning" >Language learning</option>
+<option value="Student" selected>Student</option>
+<option value="Adult">Adult</option>
+<option value="Couple">Couple</option>
+<option value="Amateur" >Amateur</option>
 </select></br>
 <b>City:</b></br>
 <select name="city">
 <option value="Dhaka" selected>Dhaka</option>
-<option value="Mymensingh">mymensingh</option>
-<option value="Comilla">Comilla</option>
-<option value="Chittagong" >Chittagong</option>
+<option value="Jashore">Jashore</option>
+<option value="Cumilla">Cumilla</option>
+<option value="Chattagram" >Chattagram</option>
 </select></br>
 </br>
 <p style="padding-left:270px;"><input type="submit" name="Update" value="Update" style="height:30px;width:100px; color:green;" />
@@ -53,4 +56,4 @@ select{width:700px; height:35px; border:1px solid black; border-radius:5px;}
   </div>
  
 
-  
+@endsection  

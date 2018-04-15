@@ -6,7 +6,7 @@
 	<tr>
 	<p><b>Post Details</b></p>
 	</br>
-	<td><b>Student Study in</b></td>
+	<td><b>Tour Type</b></td>
 	<td style="padding-right:50px;padding-left:100px; "><b>:</b></td>
 	<td>{{$Data->class}}</td>
 	</tr>		
@@ -14,7 +14,7 @@
 	</br>
 	<table>
 	<tr>
-	<td><b>Medium/Version</b></td>
+	<td><b>Travel Season</b></td>
 	<td style="padding-right:48px;padding-left:103px; "><b>:</b></td>
 	<td>{{$Data->medium}}</td>
 
@@ -23,7 +23,7 @@
 	</br>
 	<table>
 	<tr>
-	<td ><b>Student Gender</b></td>
+	<td ><b>Tourism Gender</b></td>
 	<td style="padding-right:50px;padding-left:105px; "><b>:</b></td>
 	<td>{{$Data->gender}}</td>
 
@@ -41,7 +41,7 @@
 	</br>
 	<table>
 	<tr>
-	<td><b>Provided Salary</b></td>
+	<td><b>Provided Guideline</b></td>
 	<td style="padding-right:50px;padding-left:104px; "><b>:</b></td>
 	<td>{{$Data->salary}}</td>
 

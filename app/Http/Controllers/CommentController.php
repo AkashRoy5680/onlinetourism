@@ -8,7 +8,7 @@ use Input;
 
 class CommentController extends Controller
 {
-    public function storedata()
+    protected function storedata()
 	{
 		$data=Input::except(array('_token'));
 		
@@ -25,13 +25,13 @@ class CommentController extends Controller
 	
 	
 	
-	public function show_comments($id)
+	protected function show_comments($id)
 	{
 		$coments= Comment::all()->where('postid',$id);
 		 return view('comment.coment', compact('coments'));
 		
 	}
-	public function show_allcomments()
+	protected function show_allcomments()
 	{
 		   $coments= Comment::paginate(10);
 		 return view('comment.allcoment', compact('coments'));
@@ -39,7 +39,7 @@ class CommentController extends Controller
 	}
 	
 	
-	public function edit($id)
+	protected function edit($id)
 	{
 		 $Data= Comment:: findOrFail($id);
 		 return view('comment.edit_coment', compact('Data'));
@@ -47,7 +47,7 @@ class CommentController extends Controller
 	}
 	
 	
-	public function update(  Request $request,$id)
+	protected function update(  Request $request,$id)
 	{
 		$Data= Comment:: findOrFail($id);
 		
@@ -59,7 +59,7 @@ class CommentController extends Controller
 		
 	}
 	
-	public function delete_comment($id)
+	protected function delete_comment($id)
 	{
 		$coment= Comment:: findOrFail($id);
          $coment->delete();

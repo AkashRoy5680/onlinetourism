@@ -7,8 +7,8 @@
 
 
 
-<div class="panel-heading" ><b>Applications List</b></div>
-<a href="/applyinsert" class="btn btn-info"><b>Make a New Application</b></a>
+<div class="panel-heading" ><b>Booking List</b></div>
+<a href="/applyinsert" class="btn btn-info"><b>Make a New Tour Booking</b></a>
 
 @if(Session::has('msg'))
 	

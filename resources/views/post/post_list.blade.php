@@ -34,11 +34,11 @@
 <table class="table" >
 <tr>
 <td><b>ID</b></td>
-<td><b>Class</b></td>
-<td><b>Medium</b></td>
-<td><b>Student Gender</b></td>
+<td><b>Tour Type</b></td>
+<td><b>Travel Season</b></td>
+<td><b>Tourism Gender</b></td>
 <td><b>City</b></td>
-<td><b>Provided Salary</b></td>
+<td><b>Provided Guideline</b></td>
 <td><b>Details</b></td>
 <td><b>View All</b></td>
 <td><b>Edit</b></td>
@@ -58,7 +58,7 @@
  <td>{{ $data->content }}</td>
  <td><a href="postdetails&{{ $data->id }}" class="btn btn-info">View Details</a></td>
   <td><a href="edit_post&{{ $data->id }}" class="btn btn-info">Edit</a></td>
- <td><a onclick="return confirm('Delete this record?')" class="btn btn-danger" href="delete_post&{{ $data->id }}">Delete X</a></td>
+ <td><a onclick="return confirm('Delete this record?')" class="btn btn-danger" href="delete_post&{{ $data->id }}">Delete</a></td>
  </tr>
 @endforeach
 </table>

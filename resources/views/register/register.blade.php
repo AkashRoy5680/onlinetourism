@@ -41,24 +41,24 @@
 
 <b>User type:</b></br>
 <select name="utype">
-<option value="Student" selected>Student</option>
-<option value="Teacher">Teacher</option>
-<option value="Gurdian">Gurdian</option>
+<option value="Explorer" selected>Explorer</option>
+<option value="Tourist">Tourist</option>
+<option value="Guide">Guide</option>
 </select></br>
 
 <b>Select Category:</b></br>
 <select name="category">
-<option value="Bangla medium" selected>Bangla medium</option>
-<option value="English medium">English medium</option>
-<option value="Arts">Arts</option>
-<option value="language learning" >Language learning</option>
+<option value="Student" selected>Student</option>
+<option value="Adult">Adult</option>
+<option value="Couple">Couple</option>
+<option value="Ameatuer" >Ameatuer</option>
 </select></br>
 <b>City:</b></br>
 <select name="city">
 <option value="Dhaka" selected>Dhaka</option>
-<option value="Mymensingh">mymensingh</option>
-<option value="Comilla">Comilla</option>
-<option value="Chittagong" >Chittagong</option>
+<option value="Jashore">Jashore</option>
+<option value="Cumilla">Cumilla</option>
+<option value="Chattagram" >Chattagram</option>
 </select></br>
 </br>
 <p style="padding-left:180px;"><input type="submit" name="submit"  style="height:30px;width:100px; color:green;" />

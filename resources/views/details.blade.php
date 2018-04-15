@@ -52,8 +52,8 @@
 	</br>
 	<table>
 	<tr>
-	<td ><b>Designation</b></td>
-	<td style="padding-right:50px;padding-left:56px; "><b>:</b></td>
+	<td ><b>User Type</b></td>
+	<td style="padding-right:50px;padding-left:73px; "><b>:</b></td>
 	<td>{{$Data->utype}}</td>
 
 	</tr>		
@@ -62,8 +62,8 @@
 	</br>
 	<table>
 	<tr>
-	<td ><b>Version</b></td>
-	<td style="padding-right:50px;padding-left:85px; "><b>:</b></td>
+	<td ><b>UserCategory</b></td>
+	<td style="padding-right:50px;padding-left:48px; "><b>:</b></td>
 	<td>{{$Data->category}}</td>
 
 	</tr>		
@@ -73,7 +73,7 @@
 	<table>
 	<tr>
 	<td ><b>City</b></td>
-	<td style="padding-right:50px;padding-left:108px; "><b>:</b></td>
+	<td style="padding-right:50px;padding-left:110px; "><b>:</b></td>
 	<td>{{$Data->city}}</td>
 
 	</tr>		
@@ -83,10 +83,5 @@
 			
 	</div>
 	
-	<div>
 	
-	<p><b> Educational Qualifications</b></p>
-	
-	
-	</div>
 	@endsection

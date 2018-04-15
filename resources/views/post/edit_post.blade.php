@@ -11,23 +11,23 @@ select {width:400px;}
   <form action="\update_post&<?php echo $Data->id?>" method="post">
    <input type="hidden" name="_token" value="{{csrf_token()}}">
 	<div class="form-group" class=''>
-	 <p><b> Student Study Class</b></p>
+	 <p><b> Tour Type</b></p>
     <select name="class" class="form-control">
-	 <option value="Any Class" selected>Any Class</option>
-    <option value="Play">Play</option>
-    <option value="K.G" >K.G</option>
-    <option value="Class One">Class One</option>
-   <option value="Class Two">Class Two</option>
+	 <option value="Package Tour" selected>Package Tour</option>
+    <option value="Escorted Tour">Escorted Tour</option>
+    <option value="Hosted Tour" >Hosted Tour</option>
+    <option value="All-Inclusive Tour">All-Inclusive Tour</option>
+   <option value="Luxury Tour">Luxury Tour</option>
     </select>
    
 	<div class="form-group">
-	 <p><b> Medium/Version</b></p>
+	 <p><b>Travel Season</b></p>
      <select name="medium" class="form-control">
-	 <option value="Bangla medium" selected>Bangla medium</option>
-     <option value="English medium">English medium</option>
+	 <option value="Summer" selected>Summer</option>
+     <option value="Winter">Winter</option>
   </select>
   <div class="form-group">
-	 <p><b> Student Gender</b></p>
+	 <p><b> Tourist Gender</b></p>
      <select name="gender" class="form-control">
 	 <option value="Male" selected>Male</option>
      <option value="Female">Female</option>
@@ -45,8 +45,8 @@ select {width:400px;}
    <option value="Mymensingh">Mymensingh</option>
     </select>
  <div class="form-group">
-   <p><b>Salary</b></p>
-   <input type="text" name="salary" value="{{$Data->salary}}" class="form-control"  placeholder="Provided preferable salary" required />
+   <p><b>Guideline</b></p>
+   <input type="text" name="salary" value="{{$Data->salary}}" class="form-control"  placeholder="Provided preferable Guidelline" required />
   </div>
   <div class="form-group">
    <p><b>Describes Address in Details</b></p>

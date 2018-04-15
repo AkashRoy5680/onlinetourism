@@ -7,7 +7,7 @@ use Input;
 class Post extends Model
 {
     protected $table="post";
-    public static function formstore($data)
+    protected function formstore($data)
 	
 	{
 	

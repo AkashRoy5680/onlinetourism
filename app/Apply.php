@@ -8,7 +8,7 @@ class Apply extends Model
 {
 
     protected $table="applies";
-    public static function formstore($data)
+    protected function formstore($data)
 	
 	{
 	

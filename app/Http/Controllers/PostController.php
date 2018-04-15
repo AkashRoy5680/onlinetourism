@@ -8,7 +8,7 @@ use Input;
 
 class PostController extends Controller
 {
-     public function store()
+     Protected function store()
 	{
 		$data=Input::except(array('_token'));
 		
@@ -23,7 +23,7 @@ class PostController extends Controller
 		
 	}
 	
-	public function show_posts()
+	protected function show_posts()
     {
 		//$register_users=Register::all();(by calling this method you will get all data in a single page)
       $post= Post::paginate(10);
@@ -33,7 +33,7 @@ class PostController extends Controller
 	
 	
 	
-	public function all_posts()
+	protected function all_posts()
     {
 		//$register_users=Register::all();(by calling this method you will get all data in a single page)
       $post= Post:: orderBy('id','desc')->paginate(5);
@@ -45,7 +45,7 @@ class PostController extends Controller
 	
 	
 	
-	public function edit($id)
+	protected function edit($id)
 	{
 		$Data= Post:: findOrFail($id);
 		 return view('post.edit_post', compact('Data'));
@@ -54,7 +54,7 @@ class PostController extends Controller
 	
 	
 	
-	public function update(  Request $request,$id)
+	protected function update(  Request $request,$id)
 	{
 		$Data= Post:: findOrFail($id);
 		
@@ -72,7 +72,7 @@ class PostController extends Controller
 	}
 	
 	
-	public function delete_post($id)
+	protected function delete_post($id)
 	{
 		$user= Post:: findOrFail($id);
          $user->delete();
@@ -80,7 +80,7 @@ class PostController extends Controller
 	}
 	
 	
-	 public function admin_inset_post()
+	 protected function admin_inset_post()
 	{
 		
 		$data=Input::except(array('_token'));
@@ -96,19 +96,12 @@ class PostController extends Controller
 		}  
 	
 	
-	public function show_post_details($id)
+	protected function show_post_details($id)
 	{
 		$Data= Post:: findOrFail($id);
 		 return view('post.post_details', compact('Data'));
 		
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

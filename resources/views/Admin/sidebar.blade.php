@@ -20,7 +20,7 @@
               <li><a class="" href="{{URL::to('/users')}}">Users</a></li>
 			   <li><a class="" href="/posts">Posts</a></li>
 			   <li><a class="" href="/allcoment">Comments</a></li>
-			    <li><a class="" href="/applylist">JobApplier</a></li>
+			    <li><a class="" href="/applylist">PetitionForTour</a></li>
             </ul>
           </li>
 

@@ -8,7 +8,7 @@ use Input;
 class Comment extends Model
 {
     protected $table="comment";
-    public static function formstore($data)
+    protected function formstore($data)
 	
 	{
 	

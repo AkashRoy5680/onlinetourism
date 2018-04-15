@@ -1,7 +1,7 @@
 @extends('layout2')
 @section('content')
 @if(Auth::user())
-<Center><h1> Create a post here<h1></Center>
+<Center><h1> Create a Reservation here<h1></Center>
 
 <style>
 select {width:400px;}
@@ -11,23 +11,23 @@ select {width:400px;}
   <form action="\post_action" method="post">
    <input type="hidden" name="_token" value="{{csrf_token()}}">
 	<div class="form-group" class=''>
-	 <p><b> Student Study Class</b></p>
+	 <p><b> Tour Type</b></p>
     <select name="class" class="form-control">
-	 <option value="Any Class" selected>Any Class</option>
-    <option value="Play">Play</option>
-    <option value="K.G" >K.G</option>
-    <option value="Class One">Class One</option>
-   <option value="Class Two">Class Two</option>
+	 <option value="Package Tour" selected>Package Tour</option>
+    <option value="Escorted Tour">Escorted Tour</option>
+    <option value="Hosted Tour" >Hosted Tour</option>
+    <option value="All-Inclusive Tour">All-inclusive Tour</option>
+   <option value="Luxury Tour">Luxury Tour</option>
     </select>
    
 	<div class="form-group">
-	 <p><b> Medium/Version</b></p>
+	 <p><b>Travel Season</b></p>
      <select name="medium" class="form-control">
-	 <option value="Bangla medium" selected>Bangla medium</option>
-     <option value="English medium">English medium</option>
+	 <option value="Summer" selected>Summer</option>
+     <option value="Winter">Winter</option>
   </select>
   <div class="form-group">
-	 <p><b> Student Gender</b></p>
+	 <p><b> Tourist Gender</b></p>
      <select name="gender" class="form-control">
 	 <option value="Male" selected>Male</option>
      <option value="Female">Female</option>
@@ -39,14 +39,14 @@ select {width:400px;}
 	 <p><b>City/Area</b></p>
     <select name="city" class="form-control">
 	 <option value="Dhaka" selected>Dhaka</option>
-    <option value="Chittagong">Chittagong</option>
-    <option value="Comilla" >Comilla</option>
+    <option value="Chittagram">Chattagram</option>
+    <option value="Cumilla" >Cumilla</option>
     <option value="Rangpur">Rangpur</option>
    <option value="Mymensingh">Mymensingh</option>
     </select>
  <div class="form-group">
-   <p><b>Salary</b></p>
-   <input type="text" name="salary" class="form-control"  placeholder="Provided preferable salary" required />
+   <p><b>Guideline</p>
+   <input type="text" name="salary" class="form-control"  placeholder="Provided preferable Guideline" required />
   </div>
   <div class="form-group">
    <p><b>Describes Address in Details</b></p>

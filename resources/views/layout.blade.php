@@ -27,10 +27,10 @@ select{width:600px; height:30px; border:1px solid #990000; border-radius:5px;}
       <a class="navbar-brand" href="/">Home</a>
     </div>
 	   <ul class="nav navbar-nav">
-	   <li class="active"><a href="#">Contact</a></li> 
+	   <li class="active"><a href="/contact">Contact</a></li> 
        <li class="active"><a href="{{URL::to('/profile')}}">Your Profile</a></li>
-	   <li class="active"><a href="/makepost">Make Post</a></li>
-       <li class="active"><a href="/allpost">See Recent Posts</a></li>	
+	   <li class="active"><a href="/makepost">Make Post for Reservation</a></li>
+       <li class="active"><a href="/allpost">See Recent Reservation </a></li>	
      		
     </ul>
 		  <ul class="nav navbar-nav navbar-right">
@@ -40,11 +40,11 @@ select{width:600px; height:30px; border:1px solid #990000; border-radius:5px;}
     </ul>
 	  @else
 		 <div class="navbar-header" >
-        <a class="navbar-brand" href="#">Online Tutor</a>
+        <a class="navbar-brand" href="/">Online Tourism</a>
         </div>
 	    <ul class="nav navbar-nav">
-        <li class="active"><a href="#">About Us</a></li>
-	    <li class="active"><a href="#">Contact</a></li>     
+        <li class="active"><a href="/about">About Us</a></li>
+	    <li class="active"><a href="layout">Contact</a></li>     
        </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="{{URL::to('/register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -53,7 +53,7 @@ select{width:600px; height:30px; border:1px solid #990000; border-radius:5px;}
 	@endif
   </div> 
 </nav>
-  <h3>Welcome to SafeTutor.BD</h3>
+  <h3>Welcome to Tourism Site  </h3>
   
   
   <!--Slide Show-->
@@ -98,8 +98,8 @@ select{width:600px; height:30px; border:1px solid #990000; border-radius:5px;}
   @yield('content')
 </div>
 <div style="background-color:#ff9999; color:white;height:150px; width:100%">
-<p><h2 style="padding:60px;"> <b>Become a Tutor and Start Earning!  </b> 
-<a style="color:white; float:right;" href="{{URL::to('/register')}}">Click to Become a Tutor</a></h2></p>
+<p><h2 style="padding:60px;"> <b>Become a Tourist and Start Enjoying!  </b> 
+<a style="color:white; float:right;" href="{{URL::to('/register')}}">Click to Become a Tourist</a></h2></p>
 </div>
 </body>
 </html>

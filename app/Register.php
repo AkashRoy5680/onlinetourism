@@ -14,7 +14,7 @@ class Register extends Authenticatable
 /*class Register extends Model
 {*/
 	protected $table="register_users";
-    public static function formstore($data)
+    protected function formstore($data)
 	//geting data from register controller
 	{
 	

@@ -10,7 +10,7 @@ use App\Apply;
 
 class ApplyController extends Controller
 {
-     public function store()
+     protected function store()
 	{
 		$data=Input::except(array('_token'));
 		
@@ -27,7 +27,7 @@ class ApplyController extends Controller
 	
 	
 	
-	 public function admin_insert()
+	 protected function admin_insert()
 	{
 		
 		$data=Input::except(array('_token'));
@@ -44,7 +44,7 @@ class ApplyController extends Controller
 	
 	
 	
-	public function all_applies()
+	protected function all_applies()
     {
 		//$register_users=Register::all();(by calling this method you will get all data in a single page)
       $apply= Apply::paginate(10);
@@ -53,14 +53,14 @@ class ApplyController extends Controller
 	
 	
 	
-	public function edit($id)
+	protected function edit($id)
 	{
 		$Data= Apply:: findOrFail($id);
 		return view('apply.edit_apply', compact('Data'));
 		
 	}
 	
-	public function update(  Request $request,$id)
+	protected function update(  Request $request,$id)
 	{
 		$Data= Apply:: findOrFail($id);
 		
@@ -78,7 +78,7 @@ class ApplyController extends Controller
 	
 	
 	
-	public function delete_apply($id)
+	protected function delete_apply($id)
 	{
 		$user= Apply:: findOrFail($id);
          $user->delete();

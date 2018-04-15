@@ -6,8 +6,7 @@
 
 	    <ul class="nav navbar-nav">
 		    <li class="active"><a href="edit_profile&{{ ucwords(Auth::user()->id) }}">Edit Profile</a></li>  
-        <li class="active"style="padding-left:30px;" ><a href="#" >Update Educational Qualifications</a></li>
-	   
+        
        </ul>
     <ul class="nav navbar-nav navbar-right">
     
@@ -70,8 +69,8 @@
 	</br>
 	<table>
 	<tr>
-	<td ><b>Designation</b></td>
-	<td style="padding-right:50px;padding-left:55px; "><b>:</b></td>
+	<td ><b>UserType</b></td>
+	<td style="padding-right:50px;padding-left:70px; "><b>:</b></td>
 	<td>{{ ucwords(Auth::user()->utype) }}</td>
 
 	</tr>		
@@ -80,8 +79,8 @@
 	</br>
 	<table>
 	<tr>
-	<td ><b>Version</b></td>
-	<td style="padding-right:50px;padding-left:85px; "><b>:</b></td>
+	<td ><b>UserCategory</b></td>
+	<td style="padding-right:50px;padding-left:42px; "><b>:</b></td>
 	<td>{{ ucwords(Auth::user()->category) }}</td>
 
 	</tr>		
@@ -99,12 +98,6 @@
 	</br></br></br></br>
 					
 			
-	</div>
-	
-	<div>
-	
-	<p><b> Educational Qualifications</b></p>
-	</br>
 	
 	</div>
   </div>
